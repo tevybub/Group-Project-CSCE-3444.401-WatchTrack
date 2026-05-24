@@ -1,4 +1,5 @@
 # (Project Name to be determined)
 Team members + Roles:
 | Tevin Daney - Team Lead |
-Members: Zion Welsh, Collin Burns, Jeet Rathod
+Members: Zion Welsh, Collin Burns, Jeet Rathod |
+Future Feature branches: (Insert here)
