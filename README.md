@@ -1,4 +1,4 @@
-# (Project Name to be determined)
+# (Streaming Subscription Tracker)
 Team members + Roles:
 | Tevin Daney - Team Lead |
 Members: Zion Welsh, Collin Burns, Jeet Rathod |
