@@ -27,12 +27,29 @@ To create a simple, personal alternative to bloated media tracking apps — help
 |---|---|---|---|
 | Tevin Daney | Team Lead / Repository Manager | `feature/dashboard-ui` | Repository organization, dashboard interface, and merge coordination |
 | Jeet Rathod | Watchlist Feature Developer | `feature/watchlist-management` | Add, edit, delete, and update media watchlist entries |
-| ~~Add you Name~~ | Search & Filter Developer | `feature/search-filter` | Search functionality and filtering by genre, platform, or watch status |
+| Collin Burns | Search & Filter Developer | `feature/search-filter` | Search functionality and filtering by genre, platform, or watch status |
 | Zion Welsh | Account / Backend Developer | `feature/user-authentication` | User registration, login, and account-related features |
 
-Future Feature branches: (Insert here)
+Future Feature Branches:
+- feature/profile-settings
+- feature/recommendation-engine
+- feature/mobile-responsive-ui
+- feature/notifications
 
 ## Branch Structure
+- main → stable production-ready code
+- dev → active development branch
+- feature/dashboard-ui → dashboard development
+- feature/watchlist-management → watchlist functionality
+- feature/search-filter → search and filtering features
+- feature/user-authentication → login and account system
 
 
 ## Development Workflow
+1. Create a feature branch from dev
+2. Work on assigned features independently
+3. Commit changes regularly with clear messages
+4. Push updates to GitHub
+5. Open pull requests for review
+6. Merge approved changes into dev
+7. Merge completed sprint work into main
