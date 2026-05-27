@@ -20,3 +20,19 @@ The user autthentication featrure will allow the WatchTrack users to create a ac
 - Display an error message for invalid login attempts
 - Keep each user's watchlist associated with their account
 
+## Proposed User Information
+
+The following user information may be stored for each account:
+
+- User ID
+- Username
+- Email address
+- Securely stored password information
+
+## Basic User Stories
+
+
+## Initial Acceptance Criteria
+
+
+## Notes
