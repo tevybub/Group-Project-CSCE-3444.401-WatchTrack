@@ -1,25 +1,26 @@
 # WatchTrack
 ## Project Description
-WatchTrack is a personal media watchlist application that helps the users organize there  movies and tv shows they plan to watch, are currently watching and or have already completed. Users will be able to add titles, track viewing status, organize content by genre or streaming platform, leave personal ratings, and add notes.
+WatchTrack is a social recommendation and media watchlist application designed to help users track movies and TV shows recommended by friends, family, classmates, or online communities. Unlike standard streaming platform watchlists, WatchTrack focuses on tracking who recommended each title, why it was recommended, viewing progress, and whether the recommendation was useful. The goal is to help users organize personal and shared recommendations outside of one streaming service.
 
 ## Goal 
 To create a simple, personal alternative to bloated media tracking apps — helping users keep track of what they're watching, what's next, and what's worth rewatching.
 
 ## Planned Features
 
-- User account registration and the login
-- Add movies and television shows to a personal watchlist
-- Edit or remove watchlist entries
+- User account registration and login
+- Add movies and television shows to a personal recommendation list
+- Record who recommended each title
+- Add a reason or note for the recommendation
 - Track viewing status:
+  - Recommended
   - Plan to Watch
   - Watching
   - Completed
   - Dropped
-- Assign a genre to each title
-- Assign a streaming platform to each title
-- Add personal ratings and notes
-- Search for watchlist entries
-- Filter entries by genre, platform, or viewing status
+- Add personal ratings after watching
+- Search recommendations by title
+- Filter entries by genre, platform, recommender, or viewing status
+- Dashboard showing saved recommendations and viewing progress
 
 
 ## Team Members and Roles
@@ -37,12 +38,13 @@ Future Feature Branches:
 - feature/notifications
 
 ## Branch Structure
-- main → stable production-ready code
-- dev → active development branch
-- feature/dashboard-ui → dashboard development
-- feature/watchlist-management → watchlist functionality
-- feature/search-filter → search and filtering features
-- feature/user-authentication → login and account system
+
+- `main` - Stable version of the application
+- `dev` - Development and integration branch
+- `feature/user-authentication` - User registration, login, logout, and account access
+- `feature/watchlist-management` - Add, edit, delete, and update recommended media entries
+- `feature/search-filter` - Search and filter by title, genre, platform, recommender, or status
+- `feature/dashboard-ui` - Dashboard layout and recommendation display interface
 
 
 ## Development Workflow
