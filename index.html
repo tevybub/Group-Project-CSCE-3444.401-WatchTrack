@@ -7,13 +7,21 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="page-shell">
-    <header class="topbar">
-      <div>
+  <header class="topbar">
+
+    <div class="watchtrack-logo-container">
+        <img
+            src="assets/watchtrack-logo.png"
+            alt="WatchTrack Logo"
+            class="watchtrack-logo">
+    </div>
+
+    <div>
         <p class="eyebrow">CSCE 3444 Prototype</p>
         <h1>WatchTrack</h1>
-      </div>
-      <nav id="app-nav" class="nav hidden" aria-label="Main navigation">
+    </div>
+
+    <nav id="app-nav" class="nav hidden" aria-label="Main navigation">
         <button type="button" data-section="dashboard-section" class="nav-link active">Dashboard</button>
         <button type="button" data-section="add-section" class="nav-link">Add Recommendation</button>
         <button type="button" data-section="watchlist-section" class="nav-link">Watchlist</button>
