@@ -423,4 +423,22 @@ td.actions {
   .section-header {
     flex-direction: column;
   }
+  /* ==========================================
+   WatchTrack Branding
+   ========================================== */
+
+.watchtrack-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.watchtrack-logo {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
 }
