@@ -1,10 +1,12 @@
 // watchlist.js
 // This file handles adding, editing, deleting, and finding recommendations.
 
+// Returns the current user's saved watchlist items from storage.
 function getWatchlistItems() {
   return getWatchlist();
 }
 
+//Adds a new recommendation to the watchlist, giving it a unique id and timestamp.
 function addWatchlistItem(item) {
   var items = getWatchlistItems();
 
@@ -17,6 +19,7 @@ function addWatchlistItem(item) {
   return items;
 }
 
+// Updates one or more fields on an existing watchlist item (e.g. status, rating)
 function updateWatchlistItem(id, updates) {
   var items = getWatchlistItems();
 
@@ -32,6 +35,7 @@ function updateWatchlistItem(id, updates) {
   return items;
 }
 
+// Removes a watchlist item permanently by id.
 function deleteWatchlistItem(id) {
   var items = getWatchlistItems();
   var updatedItems = [];
@@ -46,6 +50,7 @@ function deleteWatchlistItem(id) {
   return updatedItems;
 }
 
+//Looks up a single watchlist item by id, used when opening the edit form.
 function findWatchlistItem(id) {
   var items = getWatchlistItems();
 
@@ -58,6 +63,7 @@ function findWatchlistItem(id) {
   return null;
 }
 
+//Loads sample recommendations so the prototype has data to demo.
 function loadDemoWatchlistData() {
   var items = [
     {
