@@ -14,6 +14,11 @@ function startApp() {
   setupRecommendationForm();
   setupFilterInputs();
   setupWatchlistButtons();
+  if (getCurrentUser()) {
+    showApp();
+  } else {
+    showAuth();
+  }
 }
 
 function setupAuthTabs() {
@@ -134,12 +139,16 @@ function setupFilterInputs() {
   document.getElementById("status-filter").addEventListener("change", renderWatchlist);
   document.getElementById("genre-filter").addEventListener("input", renderWatchlist);
   document.getElementById("platform-filter").addEventListener("input", renderWatchlist);
+  document.getElementById("rating-filter").addEventListener("change", renderWatchlist);
+  document.getElementById("sort-filter").addEventListener("change", renderWatchlist);
 
   document.getElementById("clear-filters-btn").addEventListener("click", function () {
     document.getElementById("search-input").value = "";
     document.getElementById("status-filter").value = "";
     document.getElementById("genre-filter").value = "";
     document.getElementById("platform-filter").value = "";
+    document.getElementById("rating-filter").value = "";
+    document.getElementById("sort-filter").value = "newest";
     renderWatchlist();
   });
 }
@@ -156,9 +165,15 @@ function setupWatchlistButtons() {
     }
 
     if (action === "delete") {
-      deleteWatchlistItem(id);
-      updateDashboard();
-      renderWatchlist();
+      var confirmed = window.confirm(
+        "Are you sure you want to delete this recommendation?"
+      );
+
+      if (confirmed) {
+        deleteWatchlistItem(id);
+        updateDashboard();
+        renderWatchlist();
+      }
     }
   });
 
@@ -225,8 +240,18 @@ function renderWatchlist() {
   var status = document.getElementById("status-filter").value;
   var genre = document.getElementById("genre-filter").value;
   var platform = document.getElementById("platform-filter").value;
+  var rating = document.getElementById("rating-filter").value;
+  var sortBy = document.getElementById("sort-filter").value;
 
-  var items = filterWatchlistItems(allItems, search, status, genre, platform);
+  var items = filterWatchlistItems(
+    allItems,
+    search,
+    status,
+    genre,
+    platform,
+    rating
+  );
+  items = sortWatchlistItems(items, sortBy);
   var tableBody = document.getElementById("watchlist-body");
   var emptyState = document.getElementById("empty-state");
 
