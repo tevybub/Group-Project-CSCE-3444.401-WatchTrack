@@ -343,9 +343,16 @@ textarea {
 }
 
 .filters {
-  grid-template-columns: 1.2fr 1fr 1fr 1fr auto;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 160px auto;
   align-items: end;
   margin-bottom: 18px;
+}
+
+#clear-filters-btn {
+  width: auto;
+  min-width: 140px;
+  justify-self: start;
+  white-space: nowrap;
 }
 
 .result-count {
@@ -406,7 +413,25 @@ td.actions {
   font-weight: 700;
 }
 
+/* WatchTrack branding */
+.watchtrack-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0;
+}
+
+.watchtrack-logo {
+  display: block;
+  width: 85px;
+  max-width: 85px;
+  height: auto;
+}
+
 @media (max-width: 900px) {
+
   .auth-layout,
   .two-column,
   .recommendation-form,
@@ -423,22 +448,5 @@ td.actions {
   .section-header {
     flex-direction: column;
   }
-  /* ==========================================
-   WatchTrack Branding
-   ========================================== */
 
-.watchtrack-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-.watchtrack-logo {
-  display: block;
-  width: 200px;
-  max-width: 100%;
-  height: auto;
-}
 }
