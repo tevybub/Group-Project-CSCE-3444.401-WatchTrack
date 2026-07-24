@@ -4,84 +4,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WatchTrack Prototype</title>
+  <title>WatchTrack</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
   <header class="topbar">
-
     <div class="watchtrack-logo-container">
-      <img src="assets/watchtrack-logo.png" alt="WatchTrack Logo" class="watchtrack-logo">
+      <img
+        src="assets/watchtrack-logo.png"
+        alt="WatchTrack Logo"
+        class="watchtrack-logo"
+      />
     </div>
 
     <div>
-      <p class="eyebrow">CSCE 3444 Prototype</p>
+      <p class="eyebrow">CSCE 3444 Final Project</p>
       <h1>WatchTrack</h1>
     </div>
 
     <nav id="app-nav" class="nav hidden" aria-label="Main navigation">
-      <button type="button" data-section="dashboard-section" class="nav-link active">Dashboard</button>
-      <button type="button" data-section="add-section" class="nav-link">Add Recommendation</button>
-      <button type="button" data-section="watchlist-section" class="nav-link">Watchlist</button>
-      <button type="button" id="logout-btn" class="secondary-btn">Log Out</button>
+      <button
+        type="button"
+        data-section="dashboard-section"
+        class="nav-link active"
+      >
+        Dashboard
+      </button>
+
+      <button
+        type="button"
+        data-section="add-section"
+        class="nav-link"
+      >
+        Add Recommendation
+      </button>
+
+      <button
+        type="button"
+        data-section="watchlist-section"
+        class="nav-link"
+      >
+        Watchlist
+      </button>
+
+      <button
+        type="button"
+        id="logout-btn"
+        class="secondary-btn"
+      >
+        Log Out
+      </button>
     </nav>
   </header>
 
   <main>
     <section id="auth-section" class="auth-layout">
       <div class="hero-card">
-        <p class="eyebrow">Social media watchlist</p>
-        <h2>Save recommendations before you forget them.</h2>
+        <p class="eyebrow">Personal Media Recommendation Tracker</p>
+
+        <h2>Keep every movie and show recommendation in one place.</h2>
+
         <p>
-          WatchTrack helps users track movies and shows recommended by friends,
-          family, classmates, and online communities.
+          WatchTrack helps movie and television viewers save recommendations
+          from friends, family, classmates, and online communities without
+          being limited to one streaming service.
         </p>
+
         <ul class="feature-list">
-          <li>Save who recommended each title</li>
-          <li>Track viewing status</li>
-          <li>Search and filter your list</li>
-          <li>Review dashboard progress</li>
+          <li>Save who recommended each title and why</li>
+          <li>Track viewing progress and personal ratings</li>
+          <li>Search, filter, and sort saved titles</li>
+          <li>Maintain a separate watchlist for each account</li>
         </ul>
       </div>
 
       <div class="auth-card">
         <div class="tabs" role="tablist">
-          <button id="login-tab" type="button" class="tab active" data-auth-tab="login">Log In</button>
-          <button id="register-tab" type="button" class="tab" data-auth-tab="register">Register</button>
+          <button
+            id="login-tab"
+            type="button"
+            class="tab active"
+            data-auth-tab="login"
+          >
+            Log In
+          </button>
+
+          <button
+            id="register-tab"
+            type="button"
+            class="tab"
+            data-auth-tab="register"
+          >
+            Register
+          </button>
         </div>
 
         <form id="login-form" class="auth-form">
           <h2>Log In</h2>
+
           <label>
             Email
-            <input type="email" id="login-email" placeholder="demo@watchtrack.com" required />
+            <input
+              type="email"
+              id="login-email"
+              placeholder="demo@watchtrack.com"
+              required
+            />
           </label>
+
           <label>
             Password
-            <input type="password" id="login-password" placeholder="watchtrack" required />
+            <input
+              type="password"
+              id="login-password"
+              placeholder="watchtrack"
+              required
+            />
           </label>
-          <button type="submit" class="primary-btn full-width">Log In</button>
-          <p id="login-message" class="message" aria-live="polite"></p>
-          <p class="hint">Demo account: demo@watchtrack.com / watchtrack</p>
+
+          <button type="submit" class="primary-btn full-width">
+            Log In
+          </button>
+
+          <p
+            id="login-message"
+            class="message"
+            aria-live="polite"
+          ></p>
+
+          <p class="hint">
+            Demo account: demo@watchtrack.com / watchtrack
+          </p>
         </form>
 
         <form id="register-form" class="auth-form hidden">
           <h2>Create Account</h2>
+
           <label>
             Name
-            <input type="text" id="register-name" placeholder="Zion Welsh" required />
+            <input
+              type="text"
+              id="register-name"
+              placeholder="Zion Welsh"
+              required
+            />
           </label>
+
           <label>
             Email
-            <input type="email" id="register-email" placeholder="name@example.com" required />
+            <input
+              type="email"
+              id="register-email"
+              placeholder="name@example.com"
+              required
+            />
           </label>
+
           <label>
             Password
-            <input type="password" id="register-password" placeholder="At least 6 characters" minlength="6" required />
+            <input
+              type="password"
+              id="register-password"
+              placeholder="At least 6 characters"
+              minlength="6"
+              required
+            />
           </label>
-          <button type="submit" class="primary-btn full-width">Register</button>
-          <p id="register-message" class="message" aria-live="polite"></p>
+
+          <button type="submit" class="primary-btn full-width">
+            Register
+          </button>
+
+          <p
+            id="register-message"
+            class="message"
+            aria-live="polite"
+          ></p>
         </form>
       </div>
     </section>
@@ -93,7 +192,14 @@
             <p class="eyebrow">Dashboard</p>
             <h2 id="welcome-heading">Welcome</h2>
           </div>
-          <button type="button" id="load-demo-btn" class="secondary-btn">Load Demo Data</button>
+
+          <button
+            type="button"
+            id="load-demo-btn"
+            class="secondary-btn"
+          >
+            Load Demo Data
+          </button>
         </div>
 
         <div class="stat-grid" aria-label="Dashboard statistics">
@@ -101,14 +207,17 @@
             <span id="total-count">0</span>
             <p>Total Saved</p>
           </article>
+
           <article class="stat-card">
             <span id="plan-count">0</span>
             <p>Plan to Watch</p>
           </article>
+
           <article class="stat-card">
             <span id="watching-count">0</span>
             <p>Watching</p>
           </article>
+
           <article class="stat-card">
             <span id="completed-count">0</span>
             <p>Completed</p>
@@ -117,13 +226,28 @@
 
         <div class="two-column">
           <article class="panel-card">
-            <h3>Application Status</h3>
+            <h3>Core Features</h3>
+
             <ul class="status-list">
-              <li><span class="dot done"></span> Register, login, and logout prototype</li>
-              <li><span class="dot done"></span> Add and display media recommendations</li>
-              <li><span class="dot done"></span> Search and filter saved entries</li>
-              <li><span class="dot progress"></span> Future improvement: secure backend authentication and cloud
-                database</li>
+              <li>
+                <span class="dot done"></span>
+                User registration, login, and logout
+              </li>
+
+              <li>
+                <span class="dot done"></span>
+                Add, edit, delete, and update recommendations
+              </li>
+
+              <li>
+                <span class="dot done"></span>
+                Search, filter, and sort saved entries
+              </li>
+
+              <li>
+                <span class="dot done"></span>
+                User-specific watchlists and dashboard statistics
+              </li>
             </ul>
           </article>
 
@@ -147,7 +271,12 @@
 
           <label>
             Title
-            <input type="text" id="media-title" placeholder="The Last of Us" required />
+            <input
+              type="text"
+              id="media-title"
+              placeholder="The Last of Us"
+              required
+            />
           </label>
 
           <label>
@@ -162,17 +291,29 @@
 
           <label>
             Genre
-            <input type="text" id="media-genre" placeholder="Drama" />
+            <input
+              type="text"
+              id="media-genre"
+              placeholder="Drama"
+            />
           </label>
 
           <label>
             Platform
-            <input type="text" id="media-platform" placeholder="Netflix, Hulu, Max, etc." />
+            <input
+              type="text"
+              id="media-platform"
+              placeholder="Netflix, Hulu, Max, etc."
+            />
           </label>
 
           <label>
             Recommended By
-            <input type="text" id="media-recommender" placeholder="Friend, classmate, social media, etc." />
+            <input
+              type="text"
+              id="media-recommender"
+              placeholder="Friend, classmate, social media, etc."
+            />
           </label>
 
           <label>
@@ -200,14 +341,31 @@
 
           <label class="full-span">
             Notes
-            <textarea id="media-notes" placeholder="Why was this recommended?"></textarea>
+            <textarea
+              id="media-notes"
+              placeholder="Why was this recommended?"
+            ></textarea>
           </label>
 
           <div class="form-actions full-span">
-            <button type="submit" class="primary-btn">Save Recommendation</button>
-            <button type="button" id="cancel-edit-btn" class="secondary-btn hidden">Cancel Edit</button>
+            <button type="submit" class="primary-btn">
+              Save Recommendation
+            </button>
+
+            <button
+              type="button"
+              id="cancel-edit-btn"
+              class="secondary-btn hidden"
+            >
+              Cancel Edit
+            </button>
           </div>
-          <p id="form-message" class="message full-span" aria-live="polite"></p>
+
+          <p
+            id="form-message"
+            class="message full-span"
+            aria-live="polite"
+          ></p>
         </form>
       </section>
 
@@ -217,13 +375,20 @@
             <p class="eyebrow">Watchlist</p>
             <h2>Saved Recommendations</h2>
           </div>
-          <p id="result-count" class="result-count">0 results</p>
+
+          <p id="result-count" class="result-count">
+            0 results
+          </p>
         </div>
 
         <div class="filters panel-card">
           <label>
             Search Title
-            <input type="search" id="search-input" placeholder="Search by title..." />
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search by title..."
+            />
           </label>
 
           <label>
@@ -240,12 +405,20 @@
 
           <label>
             Genre
-            <input type="text" id="genre-filter" placeholder="Any genre" />
+            <input
+              type="text"
+              id="genre-filter"
+              placeholder="Any genre"
+            />
           </label>
 
           <label>
             Platform
-            <input type="text" id="platform-filter" placeholder="Any platform" />
+            <input
+              type="text"
+              id="platform-filter"
+              placeholder="Any platform"
+            />
           </label>
 
           <label>
@@ -269,11 +442,13 @@
             </select>
           </label>
 
-          <button type="button" id="clear-filters-btn" class="secondary-btn">
+          <button
+            type="button"
+            id="clear-filters-btn"
+            class="secondary-btn"
+          >
             Clear Filters
           </button>
-
-
         </div>
 
         <div class="table-wrapper">
@@ -290,6 +465,7 @@
                 <th>Actions</th>
               </tr>
             </thead>
+
             <tbody id="watchlist-body"></tbody>
           </table>
         </div>
@@ -301,7 +477,6 @@
       </section>
     </section>
   </main>
-  </div>
 
   <script src="js/storage.js"></script>
   <script src="js/auth.js"></script>
